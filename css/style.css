@@ -1,0 +1,16 @@
+
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: azure;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#header h1{
+    color: darkgray;
+    text-shadow: 0 0 5px #cd0000;
+}
+#wrapper{
+
+}
