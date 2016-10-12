@@ -24,6 +24,7 @@
         //echo 'origMatrix пустой';
     } else {
         $origMatrix = $_POST['origMatrix'];
+        echo $_POST['bla'];
     } ?>
     <div id="matrix">
         <table border="solid">
@@ -34,7 +35,7 @@
             <tr>
                 <?php $y = 0;
                 while ($y < 3): ?>
-                    <td><? echo $origMatrix[$j];
+                    <td><?php echo $origMatrix[$j];
                         $j++; ?></td>
                     <?php $y++; endwhile; ?>
                 <?php $x++;
@@ -48,6 +49,7 @@
             <?php foreach ($origMatrix as $elem): ?>
                 <input type="hidden" name=origMatrix[] value="<?php echo $elem; ?>">
             <?php endforeach; ?>
+            <input type="hidden" name="bla" value="bla">
             <input type="submit" value="==>">
         </form>
     </div>
