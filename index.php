@@ -4,6 +4,18 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
+<?php
+function generate_matrix()
+{
+    $i = 0;
+    while ($i < 9) {
+        $origMatrix[$i] = rand(0, 100);
+        $i++;
+    }
+    return $origMatrix;
+}
+
+?>
 <div id="header">
     <h1>MATRIX</h1>
 </div>
@@ -15,18 +27,19 @@
             <li>3</li>
         </ul>
     </div>
-    <?php if (empty($_POST['origMatrix'])) {
-        $i = 0;
-        while ($i < 9) {
-            $origMatrix[$i] = rand(0, 100);
-            $i++;
-        }
-        //echo 'origMatrix пустой';
-    } else {
+    <?php if (empty($_POST['origMatrix']) || !empty($_POST['generate'])) {
+        $origMatrix = generate_matrix();
+    } //echo 'origMatrix пустой';
+    else {
         $origMatrix = $_POST['origMatrix'];
     } ?>
     <div id="matrix">
         <table border="solid">
+            <td>
+                <form action="index.php" method="post">
+                    <button type="submit" name="generate" value="true">gen</button>
+                </form>
+            </td>
             <th bgcolor="black" colspan="3">matrix</th>
             <?php $j = 0;
             $x = 0;
