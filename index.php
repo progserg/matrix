@@ -24,7 +24,6 @@
         //echo 'origMatrix пустой';
     } else {
         $origMatrix = $_POST['origMatrix'];
-        echo $_POST['bla'];
     } ?>
     <div id="matrix">
         <table border="solid">
@@ -49,7 +48,6 @@
             <?php foreach ($origMatrix as $elem): ?>
                 <input type="hidden" name=origMatrix[] value="<?php echo $elem; ?>">
             <?php endforeach; ?>
-            <input type="hidden" name="bla" value="bla">
             <input type="submit" value="==>">
         </form>
     </div>
