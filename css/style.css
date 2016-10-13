@@ -42,7 +42,7 @@ th{
     color: azure;
 }
 div#btn{
-    width: 40px;
+    width: 120px;
     height: 20px;
     float: left;
     padding-top: 75px;
@@ -50,4 +50,5 @@ div#btn{
 table td button{
     width: 30px;
     height: 30px;
+    text-align: center;
 }
