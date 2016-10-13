@@ -49,7 +49,7 @@ function transponse($origMatrix)
 
     <?php if (empty($_POST['origMatrix']) || !empty($_POST['generate'])) {
         $origMatrix = generate_matrix();
-    } //echo 'origMatrix пустой';
+    }
     else {
         $origMatrix = $_POST['origMatrix'];
     } ?>
