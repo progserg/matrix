@@ -28,6 +28,12 @@ class Matrix{
     {
         return $this->matrix[$numRow][$numCol];
     }
+
+    public function setValue($numRow, $numCol, $val)
+    {
+        $this->matrix[$numRow][$numCol] = $val;
+    }
+    
     public function getRowCount()
     {
         return $this->rowCount;
