@@ -10,6 +10,7 @@ class MatrixTransformer
     
     public function __construct(Matrix $matrix)
     {
+        $this->name = 'transform';
         $this->rowCount = $matrix->rowCount;
         $this->colCount = $matrix->colCount;
         $i=0;
@@ -27,6 +28,7 @@ class MatrixTransformer
 
     public function transponse()
     {
+        $this->name = 'transponse';
         $i = 0;
         $temp = $this->matrix;
         $this->matrix = null;
@@ -43,5 +45,6 @@ class MatrixTransformer
         $this->rowCount = $this->colCount;
         $this->colCount = $x;
         unset($x);
+    return $this;
     }
 }

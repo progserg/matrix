@@ -8,6 +8,8 @@ class Matrix{
     protected $colCount;
     protected $matrix;
 
+    public $name = 'original';
+    
     public function __construct($rowCount=3, $colCount=3)
     {
         $this->rowCount = $rowCount;
